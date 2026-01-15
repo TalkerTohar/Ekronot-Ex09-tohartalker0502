@@ -5,6 +5,7 @@
 
 BSNode::BSNode(std::string data) : _data(data), _left(nullptr), _right(nullptr), _count(1)
 {
+
 }
 
 BSNode::BSNode(const BSNode& other) : _data(other._data), _left(nullptr), _right(nullptr), _count(other._count)
