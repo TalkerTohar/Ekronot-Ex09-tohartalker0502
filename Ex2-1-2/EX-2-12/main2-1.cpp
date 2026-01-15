@@ -20,7 +20,7 @@ public:
     }
 };
 
-
+ 
 std::ostream& operator<<(std::ostream& os, const MyClass& obj)
 {
     os << obj.value;
