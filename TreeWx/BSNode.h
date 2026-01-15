@@ -1,5 +1,4 @@
 #pragma once
-#include "main.cpp"
 #include <string>
 
 class BSNode
@@ -25,7 +24,7 @@ public:
 	int getHeight() const;
 	int getDepth(const BSNode& root) const;
 
-	void printNodes() const; //for question 1 part C
+	void printNodes() const; 
 
 private:
 	std::string _data;
