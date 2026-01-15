@@ -18,15 +18,14 @@ public:
     {
         return value == other.value;
     }
-
-    friend std::ostream& operator<<(std::ostream& os, const MyClass& obj)
-    {
-        os << obj.value;
-        return os;
-    }
 };
 
 
+std::ostream& operator<<(std::ostream& os, const MyClass& obj)
+{
+    os << obj.value;
+    return os;
+}
 
 
 
@@ -53,6 +52,23 @@ int main()
     std::cout << "correct print is sorted array" << std::endl;
     printArray<double>(doubleArr, arr_size);
     std::cout << std::endl;
+
+    //check char
+    std::cout << "char array test:" << std::endl;
+    char charArr[] = { 'z', 'a', 'm', 'b' };
+    int charSize = 4;
+    bubbleSort<char>(charArr, charSize);
+    printArray<char>(charArr, charSize);
+    std::cout << std::endl;
+
+	//check MyClass
+    std::cout << "class array test:" << std::endl;
+    MyClass classArr[] = { MyClass(5), MyClass(1), MyClass(9), MyClass(3) };
+    int classSize = 4;
+    bubbleSort<MyClass>(classArr, classSize);
+    printArray<MyClass>(classArr, classSize);
+    std::cout << std::endl;
+
 
 
     system("pause");
