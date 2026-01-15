@@ -21,4 +21,22 @@ int main()
         std::cout << strArr[i] << " ";
     }
     std::cout << std::endl;
+    //create trees and insert elements from arrays
+    BSNode<int> intTree(intArr[0]);
+    for (int i = 1; i < 15; i++)
+    {
+        intTree.insert(intArr[i]);
+    }
+    BSNode<std::string> strTree(strArr[0]);
+    for (int i = 1; i < 15; i++)
+    {
+        strTree.insert(strArr[i]);
+    }
+    //print trees in order
+    std::cout << "\nSorted int array:\n";
+    intTree.printNodes();
+    std::cout << "\nSorted string array:\n";
+    strTree.printNodes();
+
+	return 0;
 }
